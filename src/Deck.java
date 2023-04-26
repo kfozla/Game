@@ -6,6 +6,7 @@ public class Deck {
     private static int OverallResource;
     private static int ArcherNumber;
     private static int HealerNumber;
+    private ArrayList<String> Deck = new ArrayList<String>();
     public Deck(){
         OverallResource=20;
         Scanner input = new Scanner(System.in);
@@ -30,6 +31,18 @@ public class Deck {
             System.out.println("don't have enough resources for that");
             new Deck();
         }
+        for (int i=0;i<WarriorNumber;i++){
+            String name = "Warrior"+String.valueOf(i+1);
+            Deck.add(name);
+        }
+        for (int i=0;i< ArcherNumber;i++){
+            String name = "Archer"+String.valueOf(i+1);
+            Deck.add(name);
+        }
+        for (int i=0;i< HealerNumber;i++){
+            String name = "Healer"+String.valueOf(i+1);
+            Deck.add(name);
+        }
         System.out.println("Deck created successfully you have "+WarriorNumber+" Warriors "+ArcherNumber+" Archers and "+HealerNumber+" Healers");
     }
 
@@ -42,9 +55,6 @@ public class Deck {
     public int getHealerNumber(){
         return ArcherNumber;
     }
-
-    private ArrayList<String> Deck = new ArrayList<String>();
-
     public ArrayList getDeck(){
         return Deck;
     }
