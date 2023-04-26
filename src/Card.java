@@ -1,7 +1,21 @@
-public class Card {
+abstract class Card {
     private int resource;
     private int value;
     private int shield;
+    private int AttackValue;
+    private int HealValue;
+    public int getAttackValue(){
+        return AttackValue;
+    }
+    public void setAttackValue(int x){
+        AttackValue=x;
+    }
+    public int getHealValue(){
+        return HealValue;
+    }
+    public void setHealValue(int x){
+        HealValue=x;
+    }
 
     public int getResource(){
     return resource;
@@ -21,5 +35,7 @@ public class Card {
     public void setShield(int x){
         shield=x;
     }
+    public abstract void Attack();
+    public abstract void Heal();
 
 }
