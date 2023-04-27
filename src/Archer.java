@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
-abstract class Archer extends Card{
+public class Archer extends Card{
     @Override
     public void Attack(){
+
+    }
+
+    @Override
+    public void Heal() {
 
     }
 }

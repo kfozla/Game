@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
-abstract class Healer extends Card{
+public class Healer extends Card{
+    @Override
+    public void Attack() {
+
+    }
+
     @Override
     public void Heal(){
         setValue(getValue()+1);
